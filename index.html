@@ -25,50 +25,48 @@
 </head>
 
 <body>
-    <h1>Amit Giri</h1>
+    <h1 class="Headings">Amit Giri</h1>
 
     <!-- form section---------------------------- -->
     <div class="container" id="bod">
-        <form>
+        <form name="myform" action="" onsubmit="return validate()">
             <div class="headings_form text-center"><h1>Contact Us</h1></div>
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputFirstName">First Name</label>
-                    <input type="text" class="form-control" id="inputFirstName" placeholder="Enter Your First Name">
+                <div class="form-group col-md-6 " >
+                    <label for="inputFirstName" name="ffname">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" placeholder="Enter Your First Name" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputlastName">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Enter Your last Name">
+                    <input type="text" class="form-control" id="inputLastName" placeholder="Enter Your last Name" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputMobile">Mobile</label>
-                    <input type="number" class="form-control" id="inputMobile" placeholder="Enter Your Mobile No">
+                    <input type="number" class="form-control" id="inputMobile" placeholder="Enter Your Mobile No" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your Address">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your Address" required>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="inputCity" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">State</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+                    <input type="text" class="form-control" id="inputState" required>
+                    
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputZip">Pin Code</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" class="form-control" id="inputZip" required>
                 </div>
             </div>
             <div class="form-group">
@@ -91,12 +89,14 @@
             <br>
 
 
-            <button type="submit" class="btn sign   btn-primary">Sign in</button>
+            <button type="submit" id="myBtn" class="btn sign btn-primary">Sign in</button>
+            <p id="demo"></p>
             <input type="reset" value="Reset">
 
 
         </form>
     </div>
+    <script src="javascript/index.js"></script>
 
 </body>
 
